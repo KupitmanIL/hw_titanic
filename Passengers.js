@@ -6,7 +6,7 @@ fs.readFile('./train.csv', 'utf8', (err, data) => {
         return;
     }
 
-    const arr = data.split('\n');
+    const arr = data.trim().split('\n');
 
     const passengers = arr.slice(1).map(line => {
         const values = line.trim().split(',');
